@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  --primary-color: #fff;
+  --bg-sidebar-color: #222;
+  --bg-contents-color: rgb(33, 33, 33);
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh; /* Full height */
+  background: #111;
+  color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-items {
+  position: fixed;
+  top: 0;
+  width: inherit;
+  z-index: 1;
+  padding: 2px;
+  padding-top: 90;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+.new-chat,
+.search,
+.library,
+.sora,
+.gpts,
+.history-chat {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.new-chat:hover,
+.search:hover,
+.library:hover,
+.sora:hover,
+.gpts:hover,
+.history-chat:hover {
+  border-radius: 7px;
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+/* Optional: make scrollbar prettier (Webkit browsers like Chrome/Edge) */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.history-chats {
+  padding-top: 100px;
+  margin-top: 90px;
+  min-height: 80vh;
+}
+
+.chats {
+  padding: 13px;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.text-chat {
+  margin-bottom: 20px;
+}
+
+footer{
+  background: #111;
+  width: inherit;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+  border-top: 1px solid #111;
+  background-color: #111;
+  padding: 5px;
+  z-index: 1;
+  gap: 8px;
+}
+
+.name {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 2px;
+  font-size: 13px;
+}
+
+.name p{
+  color: rgb(200, 200, 200);
+}
+.contents {
+  flex: 1;
+  background: var(--bg-contents-color);
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: white;
+}
+
+.nav-logo h1 {
+  font-size: 1rem;
+}
+
+#chevron {
+  height: 18px;
+}
+
+.btn {
+  background-color: rgb(55, 54, 105);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  padding-top: 100px;
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+.input-section h2 {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.input-section h2 span {
+  color: rgb(0, 191, 255);
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
+  width: 100%;
+  background-color: #333;
+  margin-top: 50px;
+  padding: 8px 12px;
+  gap: 10px;
+  border-radius: 50px;
+}
+
+input {
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: large;
+  color: white;
+}
+
+input::placeholder {
+  color: grey;
+}
+
+.add-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 4px;
+  transition: background-color 0.2s ease-in;
+}
+
+.add-icon:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+.add-icon:active {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.icon {
+  color: white;
+}
